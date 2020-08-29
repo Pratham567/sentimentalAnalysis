@@ -22,6 +22,8 @@ def grafana_post(data):
         raise Exception("Could not connect to the monkeylearn server. Terminating POST operation...")
 
 
+# Statements to be analysed, in the format of a dict
+# where the key is data and the value is a list where each element is a statement
 data = {"data": ["This is a great tool!", "Horray! I love it.", "I hate it."]}
 # monkeylearn supports upto 500 statements at a time
 
@@ -31,6 +33,7 @@ res_data = json.loads(response.content)
 # print(response.status_code)
 # print(response.text)
 
+# Printing the result
 for elem in res_data:
-    print("%s\t%s"% (elem['text'], elem['classifications']))
-    print("\n")
+    print("\n%s\t%s"% (elem['text'], elem['classifications']))
+print("\n")
