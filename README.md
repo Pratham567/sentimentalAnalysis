@@ -28,3 +28,9 @@ personal model. This could be done in monkeylearn website using their SaaS platf
     To analyse the statements, simply run
     --> python <ModuleName>
 
+## The output would look like:
+    This is a great tool!   tag: Positive   confidence: 0.998
+
+    Horray! I love it.      tag: Positive   confidence: 0.99
+
+    I hate it.      tag: Negative   confidence: 0.96

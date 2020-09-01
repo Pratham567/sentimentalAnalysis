@@ -35,5 +35,5 @@ res_data = json.loads(response.content)
 
 # Printing the result
 for elem in res_data:
-    print("\n%s\t%s"% (elem['text'], elem['classifications']))
+    print("\n%s\ttag: %s\tconfidence: %s"% (elem['text'], elem['classifications'][0]['tag_name'], elem['classifications'][0]['confidence']))
 print("\n")
