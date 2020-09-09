@@ -1,0 +1,3 @@
+[submodule "scrapeYTcomments"]
+	path = scrapeYTcomments
+	url = git@github.com:Pratham567/scrapeYTcomments.git

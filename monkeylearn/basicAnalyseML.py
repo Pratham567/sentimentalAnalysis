@@ -6,7 +6,7 @@ To install:
 """
 
 from monkeylearn import MonkeyLearn
- 
+from scraper import data 
 # ml = MonkeyLearn('<<Your API key here>>')
 # The following API Key is public token provided by monkeylearn server
 # Each user of monkeylearn has his own API token
@@ -14,7 +14,7 @@ from monkeylearn import MonkeyLearn
 ml = MonkeyLearn('7eda867d9f75c6dc1379a9798af8bb47d993ffaa')
 
 # Statements to be analysed, in the format of a list where each element is a statement
-data = ['Customer support team is great, super helpful!', 'The UI is super confusing']
+# data = ['Customer support team is great, super helpful!', 'The UI is super confusing']
 
 # model_id = '<<Insert model ID here>>' # use this if you have trained your own model
 model_id = 'cl_pi3C7JiL' # this is public model provided by monkeylearn server
@@ -49,4 +49,5 @@ The output woud be as follows (result.body)
 res = result.body
 for elem in res:
     print("\n%s\t%s"% (elem['text'], elem['classifications']))
+    # print(elem)
 print("\n")
