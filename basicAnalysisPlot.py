@@ -1,4 +1,6 @@
-from basicAnalyseML import res
+
+# from monkeylearn1.basicAnalyseML import res
+from monkeylearn1.basicAnalyseMLAPI import res_data as res
 import numpy as np
 import pandas as pd
 from pandas import DataFrame
@@ -11,6 +13,7 @@ sns.set()
 
 # convert the classified Data into panda dataframes for plotting.
 df = pd.DataFrame()
+print(res)
 for elem in res:
     df = df.append(elem['classifications'])
 

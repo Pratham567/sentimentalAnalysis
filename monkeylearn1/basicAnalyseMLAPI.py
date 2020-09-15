@@ -7,6 +7,7 @@ For more info about monkeylearn API: https://monkeylearn.com/api/v3/#introductio
 
 import requests
 import json
+from monkeylearn1.scraper import data
 
 def grafana_post(data):
     """ This function sends a HTTP POST REQUEST to monkeylearn server using their public token
@@ -24,16 +25,16 @@ def grafana_post(data):
 
 # Statements to be analysed, in the format of a dict
 # where the key is data and the value is a list where each element is a statement
-data = {"data": ["This is a great tool!", "Horray! I love it.", "I hate it."]}
+# data = ["This is a great tool!", "Horray! I love it.", "I hate it."]
 # monkeylearn supports upto 500 statements at a time
 
-response = grafana_post(data)
+response = grafana_post({"data": data})
 res_data = json.loads(response.content)
 # Response Content is of type list with each element corresponding to each statement sent.
 # print(response.status_code)
 # print(response.text)
 
 # Printing the result
-for elem in res_data:
-    print("\n%s\ttag: %s\tconfidence: %s"% (elem['text'], elem['classifications'][0]['tag_name'], elem['classifications'][0]['confidence']))
-print("\n")
+# for elem in res_data:
+#     print("\n%s\ttag: %s\tconfidence: %s"% (elem['text'], elem['classifications'][0]['tag_name'], elem['classifications'][0]['confidence']))
+# print("\n")

@@ -6,7 +6,7 @@ To install:
 """
 
 from monkeylearn import MonkeyLearn
-from scraper import data 
+from monkeylearn1.scraper import data 
 # ml = MonkeyLearn('<<Your API key here>>')
 # The following API Key is public token provided by monkeylearn server
 # Each user of monkeylearn has his own API token
