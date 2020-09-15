@@ -4,3 +4,6 @@ array[1]= /home/bilbo/@workspace/python_projects/sentimentalAnalysis/scrapeYTcom
 export PYTHONPATH=$(printf "%s:${PYTHONPATH}" ${array[@]})
 
 python3 visualization/basicAnalysisPlot.py
+
+# export PYTHONPATH=~/one/location:${PYTHONPATH}
+# export PYTHONPATH=~/second/location:${PYTHONPATH}
